@@ -1,6 +1,114 @@
-div {
-	height: 100px;
-	width: 100px;
-	background-color: pink;
-	margin: 15px;
+@import url(https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day);
+
+
+body {
+	background-color: #ebecec;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: -120px;
 }
+
+
+
+h1 {
+	text-align: center;
+	margin-top: 80px;
+	font-size: 70px;
+	font-family: 'Dawning of a New Day', cursive;
+	color: #fd6685;
+}
+
+#cardcontainer {
+	margin-left: 270px;
+}
+
+.card {
+	height: 300px;
+	width: 200px;
+	margin: 15px;
+	background-color: pink;
+	display: inline-block;
+	border-top: 10px solid #add4bf;
+	border-left: 10px solid #add4bf;
+	border-right: 10px solid #4e8273;
+	border-bottom: 10px solid #4e8273;
+}
+
+.back {
+	background-color: black;
+}
+
+#text-form {
+	margin-top: 20px;
+	text-align: center;
+	
+
+}
+
+
+
+#coffee {
+	background-image: url(https://s-media-cache-ak0.pinimg.com/736x/e5/dc/30/e5dc3001e385e30848dd9c03aa450135.jpg);
+	height: 300px;
+	width: 200px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position-x: -122px;
+
+
+
+}
+
+#icecream {
+	background-image: url(https://capitolhillecodistrict.org/app/uploads/2015/12/MollyMoon-logo-200.jpg);
+	height: 300px;
+	width: 200px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position-x: -52px;
+}
+
+#rain {
+	background-image: url(http://40.media.tumblr.com/8fe2ffb86be89dd60749c35227130874/tumblr_nstez8plOu1uckjo7o1_500.jpg);
+	height: 300px;
+	width: 200px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position-x: -52px;
+
+}
+
+#pike {
+	background-image: url(http://www.downtownseattle.com/blog/wp-content/uploads/2012/08/Pike-Place-Market.jpg);
+	height: 300px;
+	width: 200px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position-x: -29px;
+
+}
+
+
+
+#spaceneedle {
+	background-image: url(https://img0.etsystatic.com/065/0/8609395/il_570xN.792995816_murs.jpg);
+	height: 300px;
+	width: 200px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position-x: -3px;
+
+}
+
+#beer {
+	background-image: url(http://www.arborbrewing.com/assets/sampler.jpg);
+	height: 300px;
+	width: 200px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position-x: -74px;
+
+
+}
+
+

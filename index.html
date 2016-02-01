@@ -1,19 +1,93 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="css/sweetalert.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<title>Seattle knows</title>
 </head>
-<body>
+	<body>
+		<h1>Seattle Knows</h1>
 
-<h1>Seattle Knows</h1>
+	<div id="cardcontainer">
 
-		<div>Coffee</div>  
-		<div>Molly Moons ice cream</div>
-		<div>Rain</div>
-		<div>Pike place market</div>
-		<div>Space needle</div>
-		<div>Craft beers</div>
+		<div class="card"> 
+		  	<div class="front"> 
+					<div id="coffee" class="item" data-value="Coffee"></div>  
+						<form id="text-form">
+					    	<input type="text" placeholder="What am I?">
+				  		</form>
+				</div>
+			
+			<div class="back">
+				<p>some text</p>
+			</div>
+		</div>
+	
 
+		<div class="card"> 
+		  	<div class="front">
+			<div id="icecream" class="item" data-value="Molly Moon's Ice Cream"></div>
+				<form id="text-form">
+		    		<input type="text" placeholder="What am I?">
+	  			</form>
+	  	</div>
+	  	<div class="back">
+				<p>some text</p>
+			</div>
+		</div>
+
+	  	<div class="card"> 
+		  	<div class="front"> 
+				<div id="rain" class="item" data-value="Rain"></div>
+				<form id="text-form">
+		    	<input type="text" placeholder="What am I?">
+	  		</form>
+	  	</div>
+	  	<div class="back">
+				<p>some text</p>
+			</div>
+		</div>
+					<br/>
+		<div class="card"> 
+		  	<div class="front">
+			<div id="pike" class="item" data-value="Pike Place Market"></div>
+				<form id="text-form">
+		    		<input type="text" placeholder="What am I?">
+	  			</form>
+	  	</div>
+	  	<div class="back">
+				<p>some text</p>
+			</div>
+		</div>
+
+	  	<div class="card"> 
+		  	<div class="front">
+			<div id="spaceneedle" class="item" data-value="Space Needle"></div>
+				<form id="text-form">
+		    		<input type="text" placeholder="What am I?">
+	  			</form>
+	  	</div>
+	  	<div class="back">
+				<p>some text</p>
+			</div>
+		</div>
+
+	  	<div class="card"> 
+		  	<div class="front">
+			<div id="beer" class="item" data-value="Beer"></div>
+				<form id="text-form">
+					<input type="text" placeholder="What am I?">
+	  			</form>
+	  	</div>
+	  	<div class="back">
+				<p>some text</p>
+			</div>
+		</div>
+	 </div>
+
+	<script src="js/sweetalert.min.js"></script>
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="https://cdn.rawgit.com/nnattawat/flip/v1.0.19/dist/jquery.flip.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
