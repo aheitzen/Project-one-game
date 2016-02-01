@@ -10,42 +10,48 @@ $(document).ready(function() {
 		// console.log(answer)
 		var questions = {
 			"Coffee": [
-			"Caffeine is on the International Olympic Committee list of prohibited substances." ,
-			"Which country produces the most coffee per year in the world? 1.Brazil 2.Vietnam 3.Columbia" ,
- 			"Coffee, as a world commodity, is second only to…" ,
+			"True or False: Caffeine is on the International Olympic Committee list of prohibited substances." ,
+			"Which country produces the most coffee per year in the world? Brazil, Vietnam, or Columbia" ,
+ 			"Coffee, as a world commodity, is second only to what?" ,
 			],
 
 			"Molly Moon's Ice Cream": [
-			"Prior to opening Molly Moon’s ice cream Molly was the executive director of Teach for America." ,
-			"Which one of these flavors is a permeant Molly Moon ice cream flavor?1. Earl grey 2. Salted Chocolate Chip cookie dough 3.Chocolate gooey brownie " ,
-			"What is the full name of the creator of Molly Moon’s ice cream?" , 
+			"True or False: Prior to opening Molly Moons ice cream, Molly was the executive director of Teach for America." ,
+			"Which one of these flavors is a permeant Molly Moon ice cream flavor? Earl grey, Salted Chocolate Chip cookie dough, Chocolate gooey brownie " ,
+			"What is the full name of the creator of Molly Moons ice cream?" , 
 			],
 
 			"Rain": [
-			"Rain can fall up to 15 mph" ,
-			"Which group released the 1982 hit “It’s raining men? 1.The weather girls 2. Exposé 3. Vanity 6”" ,
-			"In the 1952 musical movie adaptation “Singing in the rain” which actor played the lead man Don Lockwood?" ,
+			"True or false: Rain can fall up to 15 mph." ,
+			"Which group released the 1982 hit <em>Its raining men</em>? The weather girls, Expose, or Vanity 6?" ,
+			"In the 1952 musical movie adaptation <em>Singing in the rain</em> which actor played the lead actor Don Lockwood?" ,
 			],
 
 			"Pike Place Market": [ 
-			"The market is a significant provider of low income housing." ,
-			"Approximately how many visitors visit the market annually? 1. 10 million 2. 20 million 3.25 million" ,
-			"What kind of animal is Rachel the markets unofficial mascot?" ,
+			"True or False: The market is a significant provider of low income housing." ,
+			"Approximately how many visitors visit the market annually? 10 million, 20 million or 25 million?" ,
+			"What kind of animal is Rachel, the markets unofficial mascot?" ,
 			],
 
 			"Space Needle": [
-			"The space needle is fastened to the foundation with 150 bolts. ",
-			"In 2000 the Space needle completed a renovation, how much did the renovation cost? 1.30 Million 2.15 million 3.20 million",
+			"True or false: The space needle is fastened to the foundation with 150 bolts. ",
+			"In 2000 the Space needle completed a renovation, how much did the renovation cost? 30 Million, 15 million or 20 million?",
 			"How many feet high is the observation deck?",
 			],
 
 			"Beer": [
-			"There are over 200 craft breweries in Seattle." ,
-			"Which of the following is not a craft brewery in Seattle 1.The Good Beer Company 2.Outer planet craft brewery 3.Peddler Brewing Company?" ,
+			"True or false: There are over 200 craft breweries in Seattle." ,
+			"Which of the following is not a craft brewery in Seattle? The Good Beer Company, Outer planet craft brewery, or Peddler Brewing Company?" ,
 			"What is the study of beer and beer making called?" ,
 			]
 		}
-		questions[answer].forEach
+		var randomIndex = Math.floor(Math.random() * questions[answer].length);
+	 	var randomQuestion = questions[answer][randomIndex];
+	 	// console.log(randomQuestion)
+
+	 	$(this).parent().next().html(randomQuestion);
+
+
 
 		// iterate over questions 
 

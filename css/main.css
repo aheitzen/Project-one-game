@@ -20,13 +20,13 @@ h1 {
 
 #cardcontainer {
 	margin-left: 270px;
+
 }
 
 .card {
 	height: 300px;
 	width: 200px;
 	margin: 15px;
-	
 	display: inline-block;
 	/*border-top: 10px solid #add4bf;
 	border-left: 10px solid #add4bf;
@@ -35,7 +35,7 @@ h1 {
 }
 
 .back {
-	background-color: black;
+	background-color: pink;
 }
 
 #text-form {
