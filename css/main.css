@@ -7,6 +7,9 @@
 body {
 	background: linear-gradient(#1fb6ff 50%, white 50%);
 	height: 100%;
+
+
+
 }
 
 .dotstyle {
@@ -50,6 +53,9 @@ h2 {
 	position: relative;
 
 
+
+
+
 }
 
 .card {
@@ -57,6 +63,7 @@ h2 {
 	width: 200px;
 	margin: 15px;
 	display: inline-block;
+
 	/*border-top: 10px solid #add4bf;
 	border-left: 10px solid #add4bf;
 	border-right: 10px solid #4e8273;
@@ -66,6 +73,8 @@ h2 {
 .back {
 	background-color: #273444;
 	color: white;
+	margin-top: -40px;
+	border: 10px solid;
 }
 
 #text-form {
