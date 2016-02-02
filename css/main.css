@@ -1,11 +1,19 @@
-@import url(https://fonts.googleapis.com/css?family=Oswald:700);
+@import url(https://fonts.googleapis.com/css?family=Codystar:300);
+@import url(https://fonts.googleapis.com/css?family=Sansita+One);
+
+
 
 
 body {
-	background-color: white;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: -120px;
+	background: linear-gradient(#1fb6ff 50%, white 50%);
+	height: 100%;
+}
+
+.dotstyle {
+	background-color: #ff49db;
+	height: 10px;
+	width: 10px;
+	border-radius: 50%;
 }
 
 
@@ -13,13 +21,34 @@ body {
 h1 {
 	text-align: center;
 	margin-top: 80px;
-	font-size: 70px;
-	font-family: 'Oswald', sans-serif;
-	color: #273444;
+	font-size: 90px;
+	font-family: 'Sansita One', cursive;
+	color: white;
+	transform: rotate(0deg);
+	margin-bottom: 0;
+	z-index: 1;
+	position: relative;
 }
 
+h2 {
+	text-align: center;
+	font-size:50px;
+	margin-bottom: 30px;
+	margin-top: 5px;
+	color:white;
+	font-family: 'Codystar', cursive;
+	z-index: 1;
+	position: relative;
+
+}
+
+
+
 #cardcontainer {
-	margin-left: 270px;
+	margin-left: 296px;
+	z-index: 1; 
+	position: relative;
+
 
 }
 
@@ -41,8 +70,6 @@ h1 {
 #text-form {
 	margin-top: 20px;
 	text-align: center;
-	
-
 }
 
 
@@ -70,7 +97,10 @@ h1 {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position-x: -52px;
-	border: 10px solid #13ce66;
+	border-top: 10px solid #13ce66;
+	border-left: 10px solid #13ce66;
+	border-right: 10px solid #006622;
+	border-bottom: 10px solid #006622;
 }
 
 #rain {
@@ -80,7 +110,11 @@ h1 {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position-x: -52px;
-	border: 10px solid #ffc82c;
+	border-top: 10px solid #ffc82c;
+	border-left: 10px solid  #ffc82c;
+
+	border-bottom: 10px solid  #cca300;
+	border-right: 10px solid  #cca300;
 
 }
 
@@ -91,7 +125,10 @@ h1 {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position-x: -29px;
-	border: 10px solid #7e5bef;
+	border-top: 10px solid #7e5bef;
+	border-left: 10px solid #7e5bef;
+	border-bottom: 10px solid  #4c0099;
+	border-right: 10px solid  #4c0099;
 
 }
 
@@ -104,7 +141,10 @@ h1 {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position-x: -3px;
-	border: 10px solid #1fb6ff;
+	border-top: 10px solid #1fb6ff;
+	border-left: 10px solid #1fb6ff;
+	border-bottom: 10px solid #0071e6;
+	border-right: 10px solid #0071e6;
 
 }
 
@@ -115,8 +155,16 @@ h1 {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position-x: -74px;
-	border: 10px solid #ff7849;
+	border-top: 10px solid #ff7849;
+	border-left: 10px solid #ff7849;
+	border-bottom: 10px solid #cc5200;
+	border-right: 10px solid #cc5200;
 
+
+}
+
+.card_text {
+	font-size: 25px;
 
 }
 
