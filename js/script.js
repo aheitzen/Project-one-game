@@ -41,7 +41,7 @@ $(document).ready(function() {
 
 			"Rain": [
 			"True or false: Rain can fall up to 15 mph." ,
-			"Which group released the 1982 hit <em>Its raining men</em>? <ul><li>The weather girls</li><li>Expose</li><li>Vanity 6</li></ul>" ,
+			"Which group released the 1982 hit <em>Its raining men</em>? <ul><li>The Weather Girls</li><li>Expose</li><li>Vanity 6</li></ul>" ,
 			"In the 1952 musical movie adaptation <em>Singing in the rain</em> which actor played the lead actor Don Lockwood?" ,
 			],
 
@@ -61,18 +61,45 @@ $(document).ready(function() {
 			"True or false: There are over 200 craft breweries in Seattle." ,
 			"Which of the following is not a craft brewery in Seattle? <ul><li>Noble Ale</li><li>Outer Planet</li><li>Peddler</li></ul>" ,
 			"What is the study of beer and beer making called?" ,
-			]
+			],
 		}
 
 		var answers = {
-		"Coffee": [
-		"True" ,
-		"Brazil" ,
-		"Oil"
-		];
+			"Coffee": [
+			"True" ,
+			"Brazil" ,
+			"Oil" ,
+			],
 
+			"Molly Moon's Ice Cream": [
+			"False" ,
+			"Earl grey" ,
+			"Molly Moon Neitzel" ,
+			],
 
+			"Rain": [
+			"False",
+			"The Weather Girls",
+			"Gene Kelly",
+			],
 
+			"Pike Place Market": [
+			"True",
+			"10 million",
+			"Pig",
+			],
+
+			"Space Needle": [
+			"False",
+			"20 million",
+			"520 feet",
+			],
+
+			"Beer": [
+			"True",
+			"Noble Ale",
+			"Zythology",
+			],
 		}
 
 
@@ -91,7 +118,7 @@ $(document).ready(function() {
 	 	//This handler will listen to see when text is inputed
 	 	$(".answerbox").change(function() {
 	 		console.log(answers[answer][randomIndex])
-	 		alert("You changed the input")
+	 		
 	 	})
 	 	
 
