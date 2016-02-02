@@ -118,8 +118,18 @@ $(document).ready(function() {
 	 	//This handler will listen to see when text is inputed
 	 	$(".answerbox").change(function() {
 	 		console.log(answers[answer][randomIndex])
+	 		console.log($(this).val())
+	 	if(answers[answer][randomIndex] == $(this).val()) {
+	 		swal("Correct!", "You trivia genius, you!", "success")
+	 		}
+
+	 	else{
+	 		swal("Oops...", "Wrong answer!", "error");
+		}
 	 		
 	 	})
+
+	 	
 	 	
 
 		if(guess == answer) {
@@ -135,6 +145,11 @@ $(document).ready(function() {
 	});
 
 });
+
+$("#howtoplay").on('click' , function() {
+	 swal("How to play!", "Type in the name of the image on the card into the input field and click on the card. If correct, answer one of the three trivia questions related to the image by typing in your answer into the input field and clicking the card. See if you can flip over all the cards!")
+
+	})
 
 
 	

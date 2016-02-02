@@ -64,7 +64,8 @@ h2 {
 }
 
 .back {
-	background-color: pink;
+	background-color: #273444;
+	color: white;
 }
 
 #text-form {
@@ -165,6 +166,22 @@ h2 {
 
 .card_text {
 	font-size: 25px;
+
+}
+
+#howtoplay {
+	text-align: center;
+	margin: 20px;
+	z-index: 1;
+	position: relative;
+}
+
+#button {
+	font-family: 'Sansita One', cursive;
+	color: #1fb6ff;
+	font-size: 50px;
+	background-color: white;
+	border: solid 2px #1fb6ff;
 
 }
 
