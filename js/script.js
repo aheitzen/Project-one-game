@@ -2,7 +2,8 @@ $(document).ready(function() {
 
 
 	function createdots () {
-	var colors = []
+	var colors = ['#ff49db', '#7e5bef', '#ffc82c','#13ce66']
+
 		
 		for(var i = 0; i < 70; i++) {
 			var dot = document.createElement("div")
@@ -13,15 +14,13 @@ $(document).ready(function() {
 			dot.style.position = "absolute"
 			dot.style.right = x + "px";
 			dot.style.top = y + "px";
+			dot.style.backgroundColor = Math.random() * colors;
 			document.body.appendChild(dot);
 			}
-
-	}
-	createdots();
-	// e.preventDefault();
+		}
+		createdots()
+	
 	$(".item").on('click' , function() {
-
-		// console.log("I work")
 		
 		var guess = $(this).parent().find("#text-form input").val(); // 'coffee'
 		// console.log(guess)
@@ -64,16 +63,37 @@ $(document).ready(function() {
 			"What is the study of beer and beer making called?" ,
 			]
 		}
+
+		var answers = {
+		"Coffee": [
+		"True" ,
+		"Brazil" ,
+		"Oil"
+		];
+
+
+
+		}
+
+
 		var randomIndex = Math.floor(Math.random() * questions[answer].length);
 	 	var randomQuestion = questions[answer][randomIndex];
 	 	// console.log(randomQuestion)
 	 	var questiondiv = $(this).parent().next()
 	 	questiondiv.addClass("card_text").html(randomQuestion);
 
-	 	$(this).parent().next().append('<form><input class="backflip" type="text" placeholder="Your Answer"></form>');
-	 	$(".backflip").on('click', function (e) {
+	 	$(this).parent().next().append('<form><input class="answerbox" type="text" placeholder="Your Answer"></form>');
+	 	//this handler stops the card from flipping when the input field is clicked 
+	 	$(".back").on('click', function (e) {
 	 		e.stopPropagation();
 	 	})
+
+	 	//This handler will listen to see when text is inputed
+	 	$(".answerbox").change(function() {
+	 		console.log(answers[answer][randomIndex])
+	 		alert("You changed the input")
+	 	})
+	 	
 
 		if(guess == answer) {
 			$(this).parent().parent().flip();
@@ -88,6 +108,8 @@ $(document).ready(function() {
 	});
 
 });
+
+
 	
 
 
