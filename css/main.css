@@ -4,7 +4,7 @@
 body {
 	height: 100%;
 	background: linear-gradient(#1fb6ff 50%, white 50%);
-	
+
 
 }
 
@@ -191,6 +191,33 @@ input {
 	position: relative;
 	
 
+}
+
+#p1Score {
+	font-family: 'Sansita One', cursive;
+	background-color: #1fb6ff;
+	color: white;
+	font-size: 20px;
+	border: white solid 2px;
+	z-index: 1;
+	position: relative;
+	float: right;
+	margin-left: 10px;
+	padding: 5px;
+
+}
+
+#p2Score {
+	font-family: 'Sansita One', cursive;
+	background-color: #1fb6ff;
+	color: white;
+	font-size: 20px;
+	border: white solid 2px;
+	z-index: 1;
+	position: relative;
+	float:right;
+	margin-left: 10px;
+	padding: 5px;
 }
 
 

@@ -131,7 +131,7 @@ $(document).ready(function() {
 	 	//this handler stops the card from flipping when the input field is clicked 
 	 	$(".back").on('click', function (e) {
 	 		e.stopPropagation();
-	 	})
+	 	});
 
 	 	//This handler will listen to see when text is inputed
 	 	if(guess == answer) {
@@ -144,38 +144,44 @@ $(document).ready(function() {
 	 			// console.log($(this).val())
 		 		if(answers[answer][randomIndex] == $(this).val()) {
 		 			swal("Correct!", "You trivia genius, you!", "success")
-		 			if(currentPlayer == 1) {
+		 			if (currentPlayer == 1) {
 		 				player1Score += 1;
-					}
-		 			if(currentPlayer == 2) {
+		 				console.log('Player 1\'s score: ' + player1Score);
+		 				$("#p1Score").text('Player 1 score: ' + player1Score);
+		 				currentPlayer = 2;
+					} else if (currentPlayer == 2) {
 		 				player2Score += 1;
-		 			}
+		 				console.log('Player 2\'s score: ' + player2Score);
+		 				$("#p2Score").text('Player 2 score: ' + player2Score);
+		 				currentPlayer = 1;
+		 			};
 		 		} else {
 		 			swal("Oops...", "Wrong answer!", "error");
-		 			if(currentPlayer == 1) {
+		 			if (currentPlayer == 1) {
 		 				currentPlayer = 2;
-		 			}
-		 			if(currentPlayer == 2) {
+		 			} else if (currentPlayer == 2) {
 		 				currentPlayer = 1;
-		 			}
-				}
-	 		})
+		 			};
+				};
+	 		});
 
 		} else {
 			swal("Oops...", "Wrong answer!", "error");
 		}
 
-		if(numPlayers === 2) {
-			if(currentPlayer === 1) {
-				currentPlayer = 2; 
+		// if(numPlayers === 2) {
+		// 	if(currentPlayer === 0) {
+		// 		currentPlayer = 1;;
+		// 	}
+		// 	if(currentPlayer === 1) {
+		// 		currentPlayer = 2; 
 
-			}else{
-				currentPlayer = 1;
-			}
-		}
-
-
+		// 	}else{
+		// 		currentPlayer = 1;
+		// 	}
+		// }
 	});
+
 	$("#playerbutton1").on('click', function () {
 		numPlayers = 1;
 
