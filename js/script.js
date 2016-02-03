@@ -1,4 +1,4 @@
-var colors = ['#ff49db', '#7e5bef', '#ffc82c','#13ce66'];
+var colors = ['#ff49db', '#7e5bef', '#ffc82c','#13ce66', '#ff7849'];
 var questions = {
 	"Coffee": [
 	"True or False: Caffeine is on the International Olympic Committee list of prohibited substances." ,
@@ -8,7 +8,7 @@ var questions = {
 
 	"Molly Moon's Ice Cream": [
 	"True or False: Prior to opening Molly Moons ice cream, Molly was the executive director of Teach for America." ,
-	"Which one of these flavors is a permeant Molly Moon ice cream flavor? <ul><li>Earl grey</li><li>Chocolate Chip cookie dough</li><li>Gooey brownie</li></ul>" ,
+	"Which one of these flavors is a permeant Molly Moon ice cream flavor? <ul><li>Earl grey</li><li>Cookie dough</li><li>Gooey brownie</li></ul>" ,
 	"What is the full name of the creator of Molly Moons ice cream?" , 
 	],
 
@@ -76,10 +76,11 @@ var answers = {
 };
 
 $(document).ready(function() {
-
+	
+	$('.back').hide()
 
 	function createdots () {
-		for(var i = 0; i < 70; i++) {
+		for(var i = 0; i < 75; i++) {
 			var dot = document.createElement("div")
 			var x = Math.floor(Math.random() * document.body.offsetWidth);
 			var y = Math.floor(Math.random() * document.body.offsetHeight);
@@ -88,7 +89,7 @@ $(document).ready(function() {
 			dot.style.position = "absolute"
 			dot.style.right = x + "px";
 			dot.style.top = y + "px";
-			dot.style.backgroundColor = Math.random() * colors;
+			dot.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
 			document.body.appendChild(dot);
 		}
 	}
@@ -114,12 +115,12 @@ $(document).ready(function() {
 	 	//This handler will listen to see when text is inputed
 	 	if(guess == answer) {
 	 		questiondiv.addClass("card_text").html(randomQuestion);
-
-	 		$(this).parent().next().append('<form><input class="answerbox" type="text" placeholder="Your Answer"></form>');
+	 		
+	 		$(this).parent().next().show().append('<form><input class="answerbox" type="text" placeholder="Your Answer"></form>');
 			$(this).parent().parent().flip();
 			$(".answerbox").change(function() {
-	 			console.log(answers[answer][randomIndex])
-	 			console.log($(this).val())
+	 			// console.log(answers[answer][randomIndex])
+	 			// console.log($(this).val())
 		 		if(answers[answer][randomIndex] == $(this).val()) {
 		 			swal("Correct!", "You trivia genius, you!", "success")
 		 		} else {

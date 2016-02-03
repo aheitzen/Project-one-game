@@ -1,14 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Codystar:300);
 @import url(https://fonts.googleapis.com/css?family=Sansita+One);
 
-
-
-
 body {
-	background: linear-gradient(#1fb6ff 50%, white 50%);
 	height: 100%;
-
-
+	background: linear-gradient(#1fb6ff 50%, white 50%);
+	
 
 }
 
@@ -19,11 +15,9 @@ body {
 	border-radius: 50%;
 }
 
-
-
 h1 {
 	text-align: center;
-	margin-top: 80px;
+	margin-top: 50px;
 	font-size: 90px;
 	font-family: 'Sansita One', cursive;
 	color: white;
@@ -42,20 +36,12 @@ h2 {
 	font-family: 'Codystar', cursive;
 	z-index: 1;
 	position: relative;
-
 }
-
-
 
 #cardcontainer {
 	margin-left: 296px;
 	z-index: 1; 
 	position: relative;
-
-
-
-
-
 }
 
 .card {
@@ -73,16 +59,17 @@ h2 {
 .back {
 	background-color: #273444;
 	color: white;
-	margin-top: -40px;
+	margin-top: -38px;
 	border: 10px solid;
+	outline: 1px solid #1fb6ff;
+	/*outline: 1px solid #1fb6ff;*/
+	
 }
 
 #text-form {
 	margin-top: 20px;
 	text-align: center;
 }
-
-
 
 #coffee {
 	background-image: url(https://s-media-cache-ak0.pinimg.com/736x/e5/dc/30/e5dc3001e385e30848dd9c03aa450135.jpg);
@@ -95,9 +82,6 @@ h2 {
 	border-top: solid 10px #ff49db;
 	border-right: solid 10px #cc0099;
 	border-bottom: solid 10px #cc0099;
-
-
-
 }
 
 #icecream {
@@ -142,8 +126,6 @@ h2 {
 
 }
 
-
-
 #spaceneedle {
 	background-image: url(https://img0.etsystatic.com/065/0/8609395/il_570xN.792995816_murs.jpg);
 	height: 300px;
@@ -170,11 +152,12 @@ h2 {
 	border-bottom: 10px solid #cc5200;
 	border-right: 10px solid #cc5200;
 
-
 }
 
 .card_text {
-	font-size: 25px;
+	font-size: 20px;
+	font-family: 'Sansita One', cursive;
+	padding: 3px;
 
 }
 
@@ -191,6 +174,22 @@ h2 {
 	font-size: 50px;
 	background-color: white;
 	border: solid 2px #1fb6ff;
+
+}
+
+input {
+	font-family: 'Sansita One', cursive;
+}
+
+.playerbutton {
+	font-family: 'Sansita One', cursive;
+	background-color: #1fb6ff;
+	color: white;
+	font-size: 20px;
+	border: white solid 2px;
+	z-index: 1;
+	position: relative;
+	
 
 }
 
