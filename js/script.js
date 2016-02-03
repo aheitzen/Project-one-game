@@ -81,9 +81,9 @@ var answers = {
 };
 
 $(document).ready(function() {
-
+	//added for styling
 	$('.back').hide()
-
+	//entire function is creating the random dots
 	function createdots () {
 		for(var i = 0; i < 75; i++) {
 			var dot = document.createElement("div")
@@ -103,13 +103,9 @@ $(document).ready(function() {
 	$(".item").on('click', function() {
 		
 		var guess = $(this).parent().find("#text-form input").val(); // 'coffee'
-		// console.log(guess)
 		var answer = $(this).attr("data-value"); //{}
-		// console.log(answer)
-		
 		var randomIndex = Math.floor(Math.random() * questions[answer].length);
 	 	var randomQuestion = questions[answer][randomIndex];
-	 	// console.log(randomQuestion)
 	 	var questiondiv = $(this).parent().next()
 	 	
 	 	//this handler stops the card from flipping when the input field is clicked 
@@ -124,68 +120,49 @@ $(document).ready(function() {
 	 		$(this).parent().next().show().append('<form><input class="answerbox" type="text" placeholder="Your Answer"></form>');
 			$(this).parent().parent().flip();
 			$(".answerbox").change(function() {
-	 			// console.log(answers[answer][randomIndex])
-	 			// console.log($(this).val())
 	 			answeredcards += 1;
 		 		if(answers[answer][randomIndex] == $(this).val()) {
 		 			swal("Correct!", "You trivia genius, you!", "success")
+		 			//counter increasing the score by one if answered correctly
 		 			if (currentPlayer == 1 || numPlayers == 1) {
 		 				player1Score += 1;
-		 				// console.log('Player 1\'s score: ' + player1Score);
 		 				$("#p1Score").text('Player 1 score: ' + player1Score);
 		 				currentPlayer = 2;
 					} else if (currentPlayer == 2) {
 		 				player2Score += 1;
-		 				// console.log('Player 2\'s score: ' + player2Score);
 		 				$("#p2Score").text('Player 2 score: ' + player2Score);
 		 				currentPlayer = 1;
 		 			};
-		 		} else {
+		 			} else {
 		 			swal("Oops...", "Wrong answer!", "error");
+		 			//switching between the players regardless of answer
 		 			if (currentPlayer == 1) {
 		 				currentPlayer = 2;
 		 			} else if (currentPlayer == 2) {
 		 				currentPlayer = 1;
 		 			};
 				}
-				console.log(answeredcards)
+					//winning logic: when all 6 cards are flipped over print the sweet alerts
 					if(answeredcards === 6) {
 					if (player1Score > player2Score) {
 					swal("Player One Wins!", "Congratulations!")
 					} else if(player2Score > player1Score) {
 					swal("Player Two Wins!", "Congratulations!")
 				}
-
-	
-}
-	 		});
+			}
+	 	});
 
 		} else {
 			swal("Oops...", "Wrong answer!", "error");
 		}
-
-		// if(numPlayers === 2) {
-		// 	if(currentPlayer === 0) {
-		// 		currentPlayer = 1;;
-		// 	}
-		// 	if(currentPlayer === 1) {
-		// 		currentPlayer = 2; 
-
-		// 	}else{
-		// 		currentPlayer = 1;
-		// 	}
-		// }
 	});
 
 	$("#playerbutton1").on('click', function () {
 		numPlayers = 1;
-
-
 	})
 
 	$("#playerbutton2").on('click', function() {
 		numPlayers = 2;
-
 	})
 
 	$("#howtoplay").on('click' , function() {
