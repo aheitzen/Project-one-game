@@ -1,4 +1,6 @@
 var colors = ['#ff49db', '#7e5bef', '#ffc82c','#13ce66', '#ff7849'];
+var numPlayers = 1;
+var currentPlayers = 1;
 var questions = {
 	"Coffee": [
 	"True or False: Caffeine is on the International Olympic Committee list of prohibited substances." ,
@@ -76,7 +78,7 @@ var answers = {
 };
 
 $(document).ready(function() {
-	
+
 	$('.back').hide()
 
 	function createdots () {
@@ -132,8 +134,26 @@ $(document).ready(function() {
 			swal("Oops...", "Wrong answer!", "error");
 		}
 
+		if(numPlayers === 2) {
+			if(currentPlayers === 1) {
+				currentPlayers = 2; 
+
+			}else{
+				currentPlayers = 1;
+			}
+		}
+
 
 	});
+	$("#playerbutton1").on('click', function () {
+		numPlayers = 1;
+
+	})
+
+	$("#playerbutton2").on('click', function() {
+		numPlayers = 2;
+
+	})
 
 	$("#howtoplay").on('click' , function() {
 		swal("How to play!", "Type in the name of the image on the card into the input field and click on the card. If correct, answer one of the three trivia questions related to the image by typing in your answer into the input field and clicking the card. See if you can flip over all the cards!")
