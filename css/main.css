@@ -220,4 +220,22 @@ input {
 	padding: 5px;
 }
 
+#playerbutton1:hover {
+	background-color: #ff49db;
+}
+
+#playerbutton2:hover {
+	background-color: #7e5bef;
+}
+
+#p2Score:hover {
+	background-color: #13ce66;
+
+}
+
+#p1Score:hover {
+	background-color: #ffc82c;
+
+}
+
 

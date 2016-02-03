@@ -151,11 +151,11 @@ $(document).ready(function() {
 				console.log(answeredcards)
 					if(answeredcards === 6) {
 					if (player1Score > player2Score) {
-					swal("Player One Wins!", "")
+					swal("Player One Wins!", "Congratulations!")
 					} else if(player2Score > player1Score) {
-					swal("Player Two Wins!", "")
+					swal("Player Two Wins!", "Congratulations!")
 				}
-				
+
 	
 }
 	 		});
@@ -189,7 +189,7 @@ $(document).ready(function() {
 	})
 
 	$("#howtoplay").on('click' , function() {
-		swal("How to play!", "Type in the name of the image on the card into the input field and click on the card. If correct, answer one of the three trivia questions related to the image by typing in your answer into the input field and clicking the card. See if you can flip over all the cards!")
+		swal("How to play!", "Type in the name of the image on the card into the input field and click on the card. If correct, answer one of the three trivia questions related to the image by typing in your answer into the input field and clicking the card. Remember grammer and spelling count! See if you can flip over all the cards!")
 	})
 
 });
