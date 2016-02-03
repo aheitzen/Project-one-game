@@ -1,6 +1,23 @@
 var colors = ['#ff49db', '#7e5bef', '#ffc82c','#13ce66', '#ff7849'];
 var numPlayers = 1;
-var currentPlayers = 1;
+var currentPlayer = 1;
+var player1Score = 0;
+var player2Score = 0;
+// var cards = {
+// 	"Coffee": {
+// 		"questions":[
+// 					"True or False: Caffeine is on the International Olympic Committee list of prohibited substances." ,
+// 					"Which country produces the most coffee per year in the world? <ul><li>Brazil</li><li>Vietnam</li><li>Columbia</li></ul>" ,
+// 						"Coffee, as a world commodity, is second only to what?" ,
+// 					],
+// 		"answers":[
+// 					"True" ,
+// 					"Brazil" ,
+// 					"Oil" ,
+// 					],
+// 		"index": 0
+// 	}
+// }
 var questions = {
 	"Coffee": [
 	"True or False: Caffeine is on the International Olympic Committee list of prohibited substances." ,
@@ -77,6 +94,8 @@ var answers = {
 	],
 };
 
+// var answered = [false,false,false,false,false,false];
+
 $(document).ready(function() {
 
 	$('.back').hide()
@@ -125,8 +144,20 @@ $(document).ready(function() {
 	 			// console.log($(this).val())
 		 		if(answers[answer][randomIndex] == $(this).val()) {
 		 			swal("Correct!", "You trivia genius, you!", "success")
+		 			if(currentPlayer == 1) {
+		 				player1Score += 1;
+					}
+		 			if(currentPlayer == 2) {
+		 				player2Score += 1;
+		 			}
 		 		} else {
 		 			swal("Oops...", "Wrong answer!", "error");
+		 			if(currentPlayer == 1) {
+		 				currentPlayer = 2;
+		 			}
+		 			if(currentPlayer == 2) {
+		 				currentPlayer = 1;
+		 			}
 				}
 	 		})
 
@@ -135,11 +166,11 @@ $(document).ready(function() {
 		}
 
 		if(numPlayers === 2) {
-			if(currentPlayers === 1) {
-				currentPlayers = 2; 
+			if(currentPlayer === 1) {
+				currentPlayer = 2; 
 
 			}else{
-				currentPlayers = 1;
+				currentPlayer = 1;
 			}
 		}
 
