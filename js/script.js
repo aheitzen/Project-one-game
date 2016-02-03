@@ -3,6 +3,7 @@ var numPlayers = 1;
 var currentPlayer = 1;
 var player1Score = 0;
 var player2Score = 0;
+var answeredcards = 0;
 // var cards = {
 // 	"Coffee": {
 // 		"questions":[
@@ -144,14 +145,15 @@ $(document).ready(function() {
 	 			// console.log($(this).val())
 		 		if(answers[answer][randomIndex] == $(this).val()) {
 		 			swal("Correct!", "You trivia genius, you!", "success")
-		 			if (currentPlayer == 1) {
+		 			answeredcards += 1;
+		 			if (currentPlayer == 1 || numPlayers == 1) {
 		 				player1Score += 1;
-		 				console.log('Player 1\'s score: ' + player1Score);
+		 				// console.log('Player 1\'s score: ' + player1Score);
 		 				$("#p1Score").text('Player 1 score: ' + player1Score);
 		 				currentPlayer = 2;
 					} else if (currentPlayer == 2) {
 		 				player2Score += 1;
-		 				console.log('Player 2\'s score: ' + player2Score);
+		 				// console.log('Player 2\'s score: ' + player2Score);
 		 				$("#p2Score").text('Player 2 score: ' + player2Score);
 		 				currentPlayer = 1;
 		 			};
@@ -163,6 +165,14 @@ $(document).ready(function() {
 		 				currentPlayer = 1;
 		 			};
 				};
+					if(answeredcards === 6) {
+					if (player1Score > player2Score) {
+					swal("Player One Wins!", "")
+					} else if(player2Score > player1Score) {
+					swal("Player Two Wins!", "")
+				}
+	
+}
 	 		});
 
 		} else {
@@ -185,6 +195,7 @@ $(document).ready(function() {
 	$("#playerbutton1").on('click', function () {
 		numPlayers = 1;
 
+
 	})
 
 	$("#playerbutton2").on('click', function() {
@@ -197,6 +208,8 @@ $(document).ready(function() {
 	})
 
 });
+
+
 
 
 
