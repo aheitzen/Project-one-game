@@ -4,21 +4,6 @@ var currentPlayer = 1;
 var player1Score = 0;
 var player2Score = 0;
 var answeredcards = 0;
-// var cards = {
-// 	"Coffee": {
-// 		"questions":[
-// 					"True or False: Caffeine is on the International Olympic Committee list of prohibited substances." ,
-// 					"Which country produces the most coffee per year in the world? <ul><li>Brazil</li><li>Vietnam</li><li>Columbia</li></ul>" ,
-// 						"Coffee, as a world commodity, is second only to what?" ,
-// 					],
-// 		"answers":[
-// 					"True" ,
-// 					"Brazil" ,
-// 					"Oil" ,
-// 					],
-// 		"index": 0
-// 	}
-// }
 var questions = {
 	"Coffee": [
 	"True or False: Caffeine is on the International Olympic Committee list of prohibited substances." ,
@@ -95,8 +80,6 @@ var answers = {
 	],
 };
 
-// var answered = [false,false,false,false,false,false];
-
 $(document).ready(function() {
 
 	$('.back').hide()
@@ -143,9 +126,9 @@ $(document).ready(function() {
 			$(".answerbox").change(function() {
 	 			// console.log(answers[answer][randomIndex])
 	 			// console.log($(this).val())
+	 			answeredcards += 1;
 		 		if(answers[answer][randomIndex] == $(this).val()) {
 		 			swal("Correct!", "You trivia genius, you!", "success")
-		 			answeredcards += 1;
 		 			if (currentPlayer == 1 || numPlayers == 1) {
 		 				player1Score += 1;
 		 				// console.log('Player 1\'s score: ' + player1Score);
@@ -164,13 +147,15 @@ $(document).ready(function() {
 		 			} else if (currentPlayer == 2) {
 		 				currentPlayer = 1;
 		 			};
-				};
+				}
+				console.log(answeredcards)
 					if(answeredcards === 6) {
 					if (player1Score > player2Score) {
 					swal("Player One Wins!", "")
 					} else if(player2Score > player1Score) {
 					swal("Player Two Wins!", "")
 				}
+				
 	
 }
 	 		});
